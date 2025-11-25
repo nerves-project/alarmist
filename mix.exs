@@ -3,7 +3,7 @@ defmodule Alarmist.MixProject do
 
   @version "0.4.1"
   @description "Manage, subscribe and create alarms compatible with Erlang's built in Alarm Handler"
-  @source_url "https://github.com/smartrent/alarmist"
+  @source_url "https://github.com/nerves-project/alarmist"
 
   def project do
     [
@@ -61,7 +61,7 @@ defmodule Alarmist.MixProject do
       links: %{
         "GitHub" => @source_url,
         "Changelog" => @source_url <> "/blob/main/CHANGELOG.md",
-        "REUSE Compliance" => "https://api.reuse.software/info/github.com/smartrent/alarmist"
+        "REUSE Compliance" => "https://api.reuse.software/info/github.com/nerves-project/alarmist"
       }
     }
   end

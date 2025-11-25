@@ -2,8 +2,8 @@
 
 [![Hex version](https://img.shields.io/hexpm/v/alarmist.svg "Hex version")](https://hex.pm/packages/alarmist)
 [![API docs](https://img.shields.io/hexpm/v/alarmist.svg?label=hexdocs "API docs")](https://hexdocs.pm/alarmist/Alarmist.html)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/smartrent/alarmist/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/smartrent/alarmist/tree/main)
-[![REUSE status](https://api.reuse.software/badge/github.com/smartrent/alarmist)](https://api.reuse.software/info/github.com/smartrent/alarmist)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/nerves-project/alarmist/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/nerves-project/alarmist/tree/main)
+[![REUSE status](https://api.reuse.software/badge/github.com/nerves-project/alarmist)](https://api.reuse.software/info/github.com/nerves-project/alarmist)
 
 Alarmist builds on Erlang’s
 [alarm_handler](https://www.erlang.org/doc/man/alarm_handler) by adding support
