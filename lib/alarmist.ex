@@ -294,7 +294,7 @@ defmodule Alarmist do
   supplied module and set or clear the specified alarm ID. The module must
   `use Alarmist.Alarm`.
 
-  Calling this function a multiple times with the same alarm results in
+  Calling this function multiple times with the same alarm results in
   the previous alarm being replaced. Alarm subscribers won't receive
   redundant events if the rules are the same.
   """
