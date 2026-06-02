@@ -1,7 +1,7 @@
 # Alarmist
 
 [![Hex version](https://img.shields.io/hexpm/v/alarmist.svg "Hex version")](https://hex.pm/packages/alarmist)
-[![API docs](https://img.shields.io/hexpm/v/alarmist.svg?label=hexdocs "API docs")](https://hexdocs.pm/alarmist/Alarmist.html)
+[![API docs](https://img.shields.io/hexpm/v/alarmist.svg?label=hexdocs "API docs")](https://alarmist.hexdocs.pm/Alarmist.html)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/nerves-project/alarmist/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/nerves-project/alarmist/tree/main)
 [![REUSE status](https://api.reuse.software/badge/github.com/nerves-project/alarmist)](https://api.reuse.software/info/github.com/nerves-project/alarmist)
 
