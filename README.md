@@ -1,3 +1,7 @@
+<!--
+  SPDX-FileCopyrightText: 2024 SmartRent Technologies, Inc.
+  SPDX-License-Identifier: CC-BY-4.0
+-->
 # Alarmist
 
 [![Hex version](https://img.shields.io/hexpm/v/alarmist.svg "Hex version")](https://hex.pm/packages/alarmist)

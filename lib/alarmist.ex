@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2023 SmartRent Technologies, Inc.
+# SPDX-FileCopyrightText: 2025 Sébastien Saint-Sevin
 #
 # SPDX-License-Identifier: Apache-2.0
 #
