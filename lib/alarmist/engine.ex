@@ -433,8 +433,14 @@ defmodule Alarmist.Engine do
 
   @doc false
   @spec set_state(t(), Alarmist.alarm_id(), any()) :: t()
-  def set_state(engine, alarm_id, state) do
+  def set_state(engine, alarm_id, state) when not is_nil(state) do
     %{engine | states: Map.put(engine.states, alarm_id, state)}
+  end
+
+  @doc false
+  @spec delete_state(t(), Alarmist.alarm_id()) :: t()
+  def delete_state(engine, alarm_id) do
+    %{engine | states: Map.delete(engine.states, alarm_id)}
   end
 
   @doc false

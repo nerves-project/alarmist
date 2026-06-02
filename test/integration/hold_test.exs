@@ -76,4 +76,31 @@ defmodule Integration.HoldTest do
 
     Alarmist.remove_managed_alarm(HoldAlarm)
   end
+
+  test "setting a hold after it cleared from timing out" do
+    Alarmist.subscribe(HoldAlarm)
+    Alarmist.subscribe(HoldTriggerAlarm)
+    Alarmist.add_managed_alarm(HoldAlarm)
+    assert_receive %Alarmist.Event{id: HoldAlarm, state: :clear}
+
+    :alarm_handler.set_alarm({HoldTriggerAlarm, nil})
+    assert_receive %Alarmist.Event{id: HoldAlarm, state: :set, description: nil}
+    assert_receive %Alarmist.Event{id: HoldTriggerAlarm, state: :set, description: nil}
+
+    Process.sleep(250)
+
+    :alarm_handler.clear_alarm(HoldTriggerAlarm)
+    assert_receive %Alarmist.Event{id: HoldTriggerAlarm, state: :clear, previous_state: :set}
+
+    # The hold alarm clears after the hold time
+    assert_receive %Alarmist.Event{id: HoldAlarm, state: :clear, previous_state: :set}, 250
+
+    # This triggers a "bad argument in arithmetic expression" exception
+    :alarm_handler.set_alarm({HoldTriggerAlarm, nil})
+
+    :alarm_handler.clear_alarm(HoldTriggerAlarm)
+    assert_receive %Alarmist.Event{id: HoldTriggerAlarm, state: :clear, previous_state: :set}, 250
+
+    Alarmist.remove_managed_alarm(HoldAlarm)
+  end
 end
