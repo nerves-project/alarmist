@@ -9,7 +9,7 @@ This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## v0.4.2 - 2026-06-02
 
 * Bug fixes
-  * Fix arithmetic error exception when using the `hold` operation. Thanks to @jfcloutier and @Neztab.
+  * Fix arithmetic error exception when using the `hold` operation. Thanks to @jfcloutier and @Nezteb.
 
 ## v0.4.1 - 2025-11-03
 
