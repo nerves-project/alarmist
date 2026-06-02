@@ -313,7 +313,7 @@ defmodule Alarmist.Ops do
       input_state == :clear and output_state == :set and remaining <= 0 ->
         # Cleared and hold time has passed, so clear like normal
         engine
-        |> Engine.set_state(output, nil)
+        |> Engine.delete_state(output)
         |> Engine.cache_put(output, :clear, nil)
 
       input_state == :clear and output_state == :set ->
