@@ -217,6 +217,7 @@ defmodule AlarmistTest do
         Application.stop(:alarmist)
         Application.put_env(:alarmist, :alarm_levels, %{a_test_alarm: :info})
         Application.start(:alarmist)
+        wait_for_started()
 
         Alarmist.subscribe(:a_test_alarm)
         :alarm_handler.set_alarm({:a_test_alarm, nil})
