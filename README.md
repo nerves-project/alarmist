@@ -16,6 +16,38 @@ for subscriptions, conditional logic, and other advanced features. It is
 designed to be non-intrusive and adheres to existing conventions for naming and
 using alarms. Only the end user's application needs to depend on Alarmist.
 
+## Installation
+
+Add `alarmist` to the dependencies in your project's `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:alarmist, "~> 0.4"}
+  ]
+end
+```
+
+Alarmist starts with your application and takes over from the default
+`:alarm_handler` handler. No configuration is required.
+
+### Igniter
+
+You can also install Alarmist using [Igniter](https://igniter.hexdocs.pm/):
+
+```sh
+mix igniter.install alarmist
+```
+
+This adds the dependency and prints the next steps. Pass `--managed-alarm` to
+also scaffold a [managed alarm](#managed-alarms) module with a placeholder
+condition and register it under `config :alarmist, managed_alarms: [...]` in
+`config/config.exs`. The option may be given more than once:
+
+```sh
+mix igniter.install alarmist --managed-alarm MyApp.NetworkUnstable
+```
+
 ## What are alarms
 
 Alarms are different from events. While events can convey any information, an

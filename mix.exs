@@ -22,7 +22,7 @@ defmodule Alarmist.MixProject do
       start_permanent: Mix.env() == :prod,
       dialyzer: [
         flags: [:missing_return, :extra_return, :unmatched_returns, :error_handling, :underspecs],
-        plt_add_apps: [:ex_unit]
+        plt_add_apps: [:ex_unit, :igniter, :sourceror, :mix]
       ],
       deps: deps()
     ]
@@ -90,6 +90,7 @@ defmodule Alarmist.MixProject do
     [
       {:property_table, "~> 0.3.1"},
       {:tablet, "~> 0.2.0 or ~> 0.3.0"},
+      {:igniter, "~> 0.6", optional: true, runtime: false},
       {:ex_doc, "~> 0.27", only: :docs, runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}
